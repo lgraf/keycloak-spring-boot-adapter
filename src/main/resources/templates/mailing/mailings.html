@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>mailing overview</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <h2>Mailings</h2>
+
+        <form action="#" th:action="@{/mailings}"  method="post">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+                <tr th:each="mailing: ${mailings}">
+                    <td th:text="${mailing.id}" />
+                    <td><a th:href="@{/mailings/{id}(id=${mailing.id})}" th:text="${mailing.name}"/></td>
+                </tr>
+            </table>
+
+            <hr/>
+            <b>Create new mailing</b><br/>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name"/>
+            <input id="create" type="submit"/>
+        </form>
+
+        <br/>
+        <a href="/">home</a>
+    </body>
+</html>

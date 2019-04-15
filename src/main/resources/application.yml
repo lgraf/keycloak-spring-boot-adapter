@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: keycloak-spring-boot-adapter
+
+server:
+  port: 9080
+
+
+keycloak:
+  auth-server-url: http://localhost:10080/auth
+  realm: master
+  resource: spring-boot-adapter
+  public-client: true

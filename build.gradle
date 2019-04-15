@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.3.RELEASE'
+}
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.inxmail'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile("org.keycloak:keycloak-spring-boot-starter:5.0.0")
+
+    testCompile('junit:junit')
+}

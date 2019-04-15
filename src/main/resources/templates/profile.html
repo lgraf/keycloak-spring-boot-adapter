@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>profile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <div th:text="'Hello, ' + ${preferredUsername} + '!'" style="font-weight: bold"/><br/>
+        <div th:text="'email: ' + ${email}"/>
+        <div th:text="'given name: ' + ${givenName}"/>
+        <div th:text="'family name: ' + ${familyName}"/>
+
+        <div style="white-space: pre-wrap;" th:text="'token: ' + ${token}"/>
+
+        <br/>
+        <a href="/">home</a>
+        <a href="http://localhost:10080/auth/realms/master/account/?referrer=APPLICATION">keycloak profile</a>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>mailing overview</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <h2>Mailing</h2>
+
+        ID: <span th:text="${mailing.id}"/><br/>
+        Name: <span th:text="${mailing.name}"/>
+
+        <br/>
+        <br/>
+        <a href="/mailings"> mailing overview</a>
+        <br/>
+        <a href="/">home</a>
+    </body>
+</html>
